@@ -1,0 +1,25 @@
+{
+  "name": "twitter-auth",
+  "version": "1.0.0",
+  "description": "Auth for twitter using oauth",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^14.1.0",
+    "express": "^4.17.2",
+    "express-session": "^1.17.2",
+    "oauth": "^0.9.15"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
