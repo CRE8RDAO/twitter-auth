@@ -46,7 +46,7 @@ export const handleTwitterCallback = async (req, res) => {
   });
   req.session.save(() =>
     res.redirect(
-      `https://sybil.cre8r.vip/#/delegates/uniswap?username=${user.screen_name}`
+      `https://sybil.cre8r.vip/#/delegates/CRE8R?username=${user.screen_name}`
     )
   );
 };
