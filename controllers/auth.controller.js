@@ -49,7 +49,7 @@ export const handleTwitterCallback = async (req, res) => {
   })
   req.session.save(() =>
     res.redirect(
-      `https://amplifi.cre8r.vip/#/delegates/CRE8R?username=${user.screen_name}`
+      `https://app.amplifi.gg/#/delegates/CRE8R?username=${user.screen_name}`
     )
   )
 }
