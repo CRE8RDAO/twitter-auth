@@ -51,6 +51,7 @@ export const handleTwitterCallback = async (req, res) => {
     maxAge: 900000,
     httpOnly: true
   })
+
   console.log('wtf are we?: ', { userScreen: user.screen_name })
   req.session.save(() =>
     res.redirect(
