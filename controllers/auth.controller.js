@@ -32,11 +32,14 @@ export const handleTwitterCallback = async (req, res) => {
       oauthVerifier
     })
   req.session.oauthAccessToken = oauthAccessToken
-  console.log('inside the handle twitter callback function: ', {
-    oauthAccessToken,
-    oauthAccessTokenSecret,
-    results
-  })
+  console.log(
+    'inside the handle twitter callback function and really actually inside of getOAuthAcessTokenWith(): ',
+    {
+      oauthAccessToken,
+      oauthAccessTokenSecret,
+      results
+    }
+  )
   const { user_id: userId /*, screen_name */ } = results
   const user = await oauthGetUserById(userId, {
     oauthAccessToken,
@@ -48,7 +51,7 @@ export const handleTwitterCallback = async (req, res) => {
     maxAge: 900000,
     httpOnly: true
   })
-  console.log({ userScreen: user.screen_name })
+  console.log('wtf are we?: ', { userScreen: user.screen_name })
   req.session.save(() =>
     res.redirect(
       `https://app.amplifi.gg/#/campaigns/CRE8R?username=${user.screen_name}`
