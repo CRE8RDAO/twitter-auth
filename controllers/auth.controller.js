@@ -32,7 +32,11 @@ export const handleTwitterCallback = async (req, res) => {
       oauthVerifier
     })
   req.session.oauthAccessToken = oauthAccessToken
-  console.log({ oauthAccessToken, oauthAccessTokenSecret, results })
+  console.log('inside the handle twitter callback function: ', {
+    oauthAccessToken,
+    oauthAccessTokenSecret,
+    results
+  })
   const { user_id: userId /*, screen_name */ } = results
   const user = await oauthGetUserById(userId, {
     oauthAccessToken,
